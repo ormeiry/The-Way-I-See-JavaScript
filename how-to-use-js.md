@@ -1,4 +1,4 @@
-# How To Use Js?
+# How To Use JavaScript?
 
 ### So we want to write some JS code, and we want to learn how to use it, now the question is - How?.
 
