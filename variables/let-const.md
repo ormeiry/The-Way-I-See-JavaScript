@@ -44,6 +44,17 @@ It is a very powerful tool in the programming world, and we will learn more abou
 */
 ```
 
+When using **let**, we can not only re-assign the value of the variable, but we can also give it a different data type (more on data types on a separate file later on).
+
+```js
+let imGoingToChangeTypes = 10;
+imGoingToChangeTypes = "I was a number a second ago, now I'm a string of text!";
+imGoingToChangeTypes = false; // Now I'm a boolean!
+```
+
+As you can see in the example above, we need to be very careful when using **let**.  
+We can accidentally change a type when dealing with large codebases, and it can break our application!.
+
 Ok, so these are the basics of **let**, what about **const**?
 
 The **const** keyword is used to store a variable just like **let**, with some differences:
@@ -57,7 +68,7 @@ someValue = "This is a string! we will learn all about it!"
 ```
 
 ```js
-const someValue = 'Hello!';
+const someValue = "Hello!";
 // this is good, it will work.
 ```
 
@@ -77,11 +88,11 @@ There are some cases we can change something stored inside a constant:
 
 ```js
 const ourFirstObject = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
 };
 
-ourFirstObject.firstName = 'NOT John!!';
+ourFirstObject.firstName = "NOT John!!";
 ```
 
 In the example above we see our first JS object, we will learn all about it in a separate file. All you need to understand now is that the object has properties(it's like a container of values), and we are allowed to change the properties themselves. even when using **const**.
