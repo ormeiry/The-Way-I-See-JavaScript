@@ -35,4 +35,26 @@ const anotherLongString = `
 `;
 ```
 
+We can work with other variable and strings together:
+
+```js
+const fullName = "John Doe";
+const age = 55;
+
+const niceToMeetYou = "Hello, my name is " + fullName + ", I am " age " years old."
+
+console.log(niceToMeetYou) // "Hello, my name is John Doe, I am 55 years old."
+```
+
+Using backticks is a cleaner way, we just use the variable name like so:
+
+```js
+const fullName = "John Doe";
+const age = 55;
+
+const niceToMeetYou = `Hello, my name is ${fullName}, I am ${age} years old`;
+
+console.log(niceToMeetYou); // "Hello, my name is John Doe, I am 55 years old."
+```
+
 There are a lot of things we can do with strings and a lot of built-in methods for them that we can use.
