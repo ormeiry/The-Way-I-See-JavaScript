@@ -41,7 +41,7 @@ We can work with other variable and strings together:
 const fullName = "John Doe";
 const age = 55;
 
-const niceToMeetYou = "Hello, my name is " + fullName + ", I am " age " years old."
+const niceToMeetYou = "Hello, my name is " + fullName + ", I am " + age + " years old."
 
 console.log(niceToMeetYou) // "Hello, my name is John Doe, I am 55 years old."
 ```
