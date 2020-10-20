@@ -69,18 +69,69 @@ const strObj = new String('This is how we create a string object directly');
 You can think of the String object in the same way we think about cars. Cars are not all the same, as not all strings are the same, but all the cars share some things, in the sense that all (working) cars can start, can play music, have windshields, have an engine, can break, and much more. So, any string we create has some abilities and properties that the **String object** inherently provides.
 There are a lot of things we can do with strings and a lot of built-in methods for them that we can use. Let's see some of them in action:
 
-```js
-const myStr = 'How long am I??';
-console.log(myStr.length); // outputs 15
-// gives us the length of the string, the number of characters and spaces it has.
-```
+**string.length**
 
 ```js
+// gives us the length of the string, the number of characters and spaces it has.
+
+const myStr = 'How long am I??';
+console.log(myStr.length); // outputs 15
+```
+
+**string.charAt()**
+
+```js
+// charAt() is a method that returns the character from the specified index.
+// Characters in a string are indexed from left to right.
+// Starts at position 0 and ends at position (myStr.length - 1).
+
 const myStr = 'What index am I??';
 console.log(myStr.charAt(5)); // outputs ' i '
 console.log(myStr.charAt(0)); // outputs ' W '
 console.log(myStr.charAt(myStr.length - 1)); // outputs ' ? '
-// charAt() is a method that returns the character from the specified index.
-// Characters in a string are indexed from left to right.
-// Starts at position 0 and ends at position (myStr.length - 1).
+```
+
+**string.concat()**
+
+```js
+// The concat() method returns a new string.
+// The result will be the two strings combined.
+
+let strOne = 'I was here first!, ';
+let strTwo = 'I want to be added!';
+const newStr = strOne.concat(strTwo);
+
+console.log(newStr); // output: "I was here first!, I want to be added!";
+```
+
+**string.indexOf()**
+
+```js
+// Returns the index of the first occurrence of the specified value
+// Starting the search at the index we specify (if we do not, the default is 0)
+// If the exact value does not exist in the string, it will return -1.
+
+const searchMeStr = 'Can you find something here??';
+
+let indexOfValue = searchMeStr.indexOf('you', 5);
+console.log(indexOfValue); // output: -1
+// We asked the method to start searching at index 5
+// There is no match since "you" starts at index 4.
+
+indexOfValue = searchMeStr.indexOf('you');
+console.log(indexOfValue); // output: 4
+// This time we didn't add the index to start with
+// The default is 0, and the method will return the index 4.
+```
+
+**string.lastIndexOf()**
+
+```js
+// This method works the same as the above one, but as implied in its name
+// it will return the index of the value we search inside the string, but where it is last appearing.
+
+const findTheLast = 'This string is a special string!!';
+
+let lastAppearanceAt = findTheLast.lastIndexOf('string');
+console.log(lastAppearanceAt); // output: 25
 ```
