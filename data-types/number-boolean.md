@@ -110,3 +110,5 @@ function checkAuth(user) {
 ```
 
 The example above is a simple one, in real applications, the process is somewhat different and has more levels and complexity.
+
+[string ->](./string.md)

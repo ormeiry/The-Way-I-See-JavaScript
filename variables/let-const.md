@@ -68,7 +68,7 @@ someValue = "This is a string! we will learn all about it!"
 ```
 
 ```js
-const someValue = "Hello!";
+const someValue = 'Hello!';
 // this is good, it will work.
 ```
 
@@ -88,11 +88,11 @@ There are some cases we can change something stored inside a constant:
 
 ```js
 const ourFirstObject = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
 };
 
-ourFirstObject.firstName = "NOT John!!";
+ourFirstObject.firstName = 'NOT John!!';
 ```
 
 In the example above we see our first JS object, we will learn all about it in a separate file. All you need to understand now is that the object has properties(it's like a container of values), and we are allowed to change the properties themselves. even when using **const**.
@@ -108,3 +108,5 @@ someObj = {
 }
  // This will fail, in this example, we are trying to change the object directly, we are re-assigning the constant **someObj** itself.
 ```
+
+[Data Types - number & boolean ->](../data-types/number-boolean.md)

@@ -29,8 +29,10 @@ The first option can be used for learning purposes, but not for developing a rea
 
 ## Server-side (back-end development):
 
-- We can run JS code on our computer without using a client (no browser), by instaling NodeJS and running the .js file in the terminal:
+- We can run JS code on our computer without using a client (no browser), by installing NodeJS and running the .js file in the terminal:
   - <img src="assets/downloadnode.png" alt="downloadnode" width="500"/>
   - <img src="assets/insideterminaljs.png" alt="insideterminaljs" width="500"/>
 
 ### Now that we know where we can write our JS code, let's begin to learn some of it.
+
+[Starting with Variables ->](./variables/let-const.md)

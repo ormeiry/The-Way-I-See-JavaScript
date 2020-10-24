@@ -11,3 +11,5 @@ Join me on this great adventure!.
 ```js
 console.log("Let's Get Started!.");
 ```
+
+[How To Use JS ->](./how-to-use-js.md)
