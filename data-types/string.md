@@ -135,3 +135,28 @@ const findTheLast = 'This string is a special string!!';
 let lastAppearanceAt = findTheLast.lastIndexOf('string');
 console.log(lastAppearanceAt); // output: 25
 ```
+
+**string.split()**
+
+```js
+// This method splits a String object into an array of strings by separating the string into substrings.
+// We aill learn about array later on, for now, think of it as a stack of data,
+// it looks like [1, 2, 3, 4] -> it's starts at 0 index just like a string
+// we can store any data type at each slot of the array.
+
+const stringToSplit = 'This string will be split into an array of strings!';
+
+// we need to tell the split method what we want to split the string by.
+// here we tell the split to split the string by spaces.
+const newStrArray = stringToSplit.split(' ');
+
+console.log(newStrArray);
+// output: ["This", "string", "will", "be", "split", "into", "an", "array", "of","strings!"]
+
+// we can tell the method to stop at some point, maybe we want 5 items in // the array and not all items as we have seen above?...
+
+const shortStrArr = stringToSplit(' ', 5);
+
+console.log(shortStrArray);
+// output: ["This", "string", "will", "be", "split"]
+```
