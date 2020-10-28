@@ -160,3 +160,25 @@ const shortStrArr = stringToSplit(' ', 5);
 console.log(shortStrArray);
 // output: ["This", "string", "will", "be", "split"]
 ```
+
+**string.toLowerCase()**
+
+```js
+// This method returns the value of the string but converts it all to lower case
+
+const str = 'This string will be changed to LOWERcase only. ';
+
+console.log(str.toLowerCase());
+// output: this string will be changed to lower case only.
+```
+
+**string.toUpperCase()**
+
+```js
+// This method returns the value of the string but converts it all to upper case
+
+const str = 'This string will be changed to UPPERcase only. ';
+
+console.log(str.toUpperCase());
+// output: THIS STRING WILL BE CHANGED TO UPPERCASE ONLY.
+```
