@@ -198,7 +198,6 @@ console.log(ourSubStr); // output: see the magic!.
 // where to stop "cutting" the string. if we don't add it, it goes all
 // the way to the end, just like the above example.
 
-const ourSecondStr = "Now you will see the magic!.";
 const ourSecondSubStr = ourStr.substring(13, 16);
 // 16 is where we want to stop, it is not included in the returned string.
 console.log(ourSecondSubStr); // output: see
