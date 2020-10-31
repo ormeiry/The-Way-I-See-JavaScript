@@ -211,7 +211,7 @@ console.log(ourSecondSubStr); // output: see
 
 const strToSlice = 'This string will be sliced!';
 
-// We tell to slice 5 from the end of the string.
+// We tell it to slice 5 from the end of the string.
 console.log(strToSlice.slice(-5)); // output: iced!
 
 // We tell it to slice 7 from the end to 5 from the end.
