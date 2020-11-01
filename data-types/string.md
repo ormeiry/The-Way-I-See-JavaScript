@@ -231,3 +231,10 @@ console.log(strToSlice.slice(-2, -1)); // output: d
 console.log(strToSlice.slice(-10, -12)); //output: '';
 console.log(strToSlice.slice(5, 3)); //output: '';
 ```
+
+<hr />
+
+**So, we have covered a lot on the string data type, and the methods we can use on it.
+There are more methods, but the ones we have seen here are the most commonly used.**
+
+Let's continue with the next data type [array ->](./array.md)
