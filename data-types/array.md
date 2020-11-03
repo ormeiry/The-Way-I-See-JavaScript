@@ -13,3 +13,49 @@ const ourFirstArray = ['a string', true, 10, 'another string!'];
 console.log(ourFirstArray[0]); // output: "a string"
 console.log(ourFirstArray[2]); // output: 10
 ```
+
+Just like we learned on strings, the array object has a length property, which we can use to get the total length of the array, or in other words, the number of items it stores.
+
+```js
+// We create an array with five numbers.
+const ourArray = [1, 29, 42, 13, 12];
+
+console.log(ourArray.length) output: 5
+// This is will be useful in cases in which we need to take some action
+// according to the length of the array in hand.
+```
+
+## Let's see some of the main methods the array object has:
+
+<br />
+
+**array.concat()**
+
+```js
+// We use this method in order to take the original array, and add to it.
+// This method returns a brand new array without mutating the old one
+
+const ogArr = ['this', 'will', 'not', 'change!'];
+const otherArr = ['Will', 'I', 'join the new array?', true];
+
+const joinedArr = ogArr.concat(otherArr);
+
+// Unchanged
+console.log(ogArr);
+output: ['this', 'will', 'not', 'change!'];
+console.log(otherArr);
+output: ['Will', 'I', 'join the new array?', true];
+
+// New array
+console.log(joinedArr);
+output: [
+  'this',
+  'will',
+  'not',
+  'change!',
+  'Will',
+  'I',
+  'join the new array?',
+  true,
+];
+```
