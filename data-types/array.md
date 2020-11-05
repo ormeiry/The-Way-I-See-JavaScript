@@ -5,7 +5,7 @@ We can think of an array as a container of multiple variables.
 In JS, arrays are flexibles. We don't need to specify the length when creating a new array, unlike we do in other strong-typed programming languages. In addition to all that, we can store a mix of data types.
 
 ```js
-const ourFirstArray = ["a string", true, 10, "another string!"];
+const ourFirstArray = ['a string', true, 10, 'another string!'];
 // Now we have an array with 4 variables inside it.
 // Arrays are zero-based, so the first item inside it is at position 0.
 
@@ -57,8 +57,8 @@ output: [1, 10, "I've Changed!", 26, "I'm Last"];
 
 ```js
 // This method will add the item we pass to it to the end of the array.
-const arr = ["hello", "hi"];
-arr.push("Hey");
+const arr = ['hello', 'hi'];
+arr.push('Hey');
 
 console.log(arr); // output: ["hello", "hi", "Hey"]
 ```
@@ -69,7 +69,7 @@ console.log(arr); // output: ["hello", "hi", "Hey"]
 // As a counter to the push method, this one will remove the
 // last item in the array. We don't need to give it any arguments.
 
-const arr = ["hello", "hi", "Hey"];
+const arr = ['hello', 'hi', 'Hey'];
 arr.pop();
 
 console.log(arr); // output: ["hello", "hi"]
@@ -96,33 +96,46 @@ console.log(firstItem);
 output: 6;
 ```
 
+**array.unshift()**
+
+```js
+// If we want to add an item to the start of the array,
+// we can use unshift method.
+
+const arr = ['I will move to index 1', 'I will move to index 2'];
+arr.unshift("I'm first!");
+
+console.log(arr);
+// output:  ["I'm first!", "I will move to index 1", "I will move to index 2"]
+```
+
 **array.concat()**
 
 ```js
 // We use this method in order to take the original array content, and add to it.
 // This method returns a brand new array without mutating the original one.
 
-const ogArr = ["this", "will", "not", "change!"];
-const otherArr = ["Will", "I", "join the new array?", true];
+const ogArr = ['this', 'will', 'not', 'change!'];
+const otherArr = ['Will', 'I', 'join the new array?', true];
 
 const joinedArr = ogArr.concat(otherArr);
 
 // Unchanged
 console.log(ogArr);
-output: ["this", "will", "not", "change!"];
+output: ['this', 'will', 'not', 'change!'];
 console.log(otherArr);
-output: ["Will", "I", "join the new array?", true];
+output: ['Will', 'I', 'join the new array?', true];
 
 // New array
 console.log(joinedArr);
 output: [
-  "this",
-  "will",
-  "not",
-  "change!",
-  "Will",
-  "I",
-  "join the new array?",
+  'this',
+  'will',
+  'not',
+  'change!',
+  'Will',
+  'I',
+  'join the new array?',
   true,
 ];
 ```
