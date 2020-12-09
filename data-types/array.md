@@ -139,3 +139,30 @@ output: [
   true,
 ];
 ```
+
+**array.some()**
+
+```js
+// Let's say we want to check if our array has some
+// item that answers a condition.
+// We want to know if the array contains a number larger than 20.
+
+const numArr = [20, 19, 26, 10, 12];
+// We call the --some-- method, and pass a function that runs for
+// each item in the array, inside that function we get access to
+// the current item, the index of that item, and the array itself.
+
+numArr.some(function (item, index, ourArray) {
+  // now that we are inside the function body, for each
+  // item we will check if the item is larger than 20 with the > sign.
+  return item > 20;
+});
+// returns true.
+// This will return true if even only one of the items is larger than 20.
+
+const otherNumArr = [2, 19, 6, 11, 17];
+otherNumArr.some(function (item, index, ourArray) {
+  return item > 20;
+});
+// returns false
+```
