@@ -35,7 +35,7 @@ const arr = [1, 10, -2, 26];
 
 arr[2] = "I've Changed!";
 console.log(arr);
-output: [1, 10, "I've Changed!", 26];
+// output: [1, 10, "I've Changed!", 26];
 
 // Add an item to the end of the list manually by using the length
 // property, it will give us the length of the array which is 4, and we
@@ -44,7 +44,7 @@ output: [1, 10, "I've Changed!", 26];
 // 4 will be a new index.
 
 arr[arr.length] = "I'm Last!";
-output: [1, 10, "I've Changed!", 26, "I'm Last"];
+// output: [1, 10, "I've Changed!", 26, "I'm Last"];
 ```
 
 <hr><br>
@@ -86,14 +86,14 @@ const arr = [4, 6, 19, 20];
 // It returns the item it removes, so we can store it.
 let firstItem = arr.shift();
 console.log(firstItem);
-output: 4;
+// output: 4;
 
 // The second item (6), is now the first one as the whole
 // array shifts one spot back.
 
 firstItem = arr.shift();
 console.log(firstItem);
-output: 6;
+// output: 6;
 ```
 
 **array.unshift()**
@@ -122,13 +122,13 @@ const joinedArr = ogArr.concat(otherArr);
 
 // Unchanged
 console.log(ogArr);
-output: ['this', 'will', 'not', 'change!'];
+// output: ['this', 'will', 'not', 'change!'];
 console.log(otherArr);
-output: ['Will', 'I', 'join the new array?', true];
+// output: ['Will', 'I', 'join the new array?', true];
 
 // New array
 console.log(joinedArr);
-output: [
+// output: [
   'this',
   'will',
   'not',
