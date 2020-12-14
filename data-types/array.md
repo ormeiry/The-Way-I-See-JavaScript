@@ -166,3 +166,21 @@ otherNumArr.some(function (item, index, ourArray) {
 });
 // returns false
 ```
+
+**array.every()**
+
+```js
+// Just like in the --some-- method above, this method checks the values
+// inside the array,  and returns a boolean. The difference is, that the
+// --every-- method returns true only if all the values answer the condition
+
+const numArr = [20, 2, 11, 130, 18];
+numArr.every(function (item, index, ourArray) {
+  return item >= 10;
+}); // This returns false! the 2 inside the array is less than 10
+
+const otherNumArr = [17, 32, 18, 1250, 25];
+otherNumArr.every(function (item, index, ourArray) {
+  return item >= 10;
+}); // This return true!
+```
