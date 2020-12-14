@@ -184,3 +184,26 @@ otherNumArr.every(function (item, index, ourArray) {
   return item >= 10;
 }); // This return true!
 ```
+
+**array.filter()**
+
+```js
+// As the name suggests, this method filters an array,
+// and returns the new array containing only the items
+// that passed the given "test".
+
+const initialArr = [2, 3, 5, 10, 4, 1];
+// now we create a new constant to hold the result.
+
+const filteredArr = initialArr.filter(function(item, index, ourArray) {
+	// Let's filter out the items that are smaller than their index.
+	// Remember, we run this function and have access to each
+	// item and its index, so the first item will be 2 with the index of 0
+	// the second item is 3 with the index of 1, and so on.
+
+	return item > index
+}
+console.log(filteredArr); // output: [2, 3, 5, 10]
+
+// The initialArr stays the same as it was.
+```
