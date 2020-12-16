@@ -279,7 +279,7 @@ console.log(ourArr.reverse());
 const ogArr = [1, 2, 3, 4, 5];
 
 const newReversedArr = ogArr.slice().reverse();
-console.log(newReversedArr
+console.log(newReversedArr);
 // output: [5, 4, 3, 2, 1]
 
 console.log(ogArr);
