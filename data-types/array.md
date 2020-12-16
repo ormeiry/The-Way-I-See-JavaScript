@@ -231,3 +231,32 @@ console.log(newArr); // output:  [3, 6, 9, 12, 15, 18]
 // The original array stays as it was.
 console.log(ogArr); // output:  [1, 2, 3, 4, 5, 6]
 ```
+
+**array.slice()**
+
+```js
+// We use the slice method to get a copy
+// of an array.
+const ogArr = ["hi", "hello", "hey", "hola"];
+
+// We tell the method where to start slicing and
+// where to stop, the end will not be included.
+// the numbers are the indexs.
+const copyArr = ogArr.slice(0, 2);
+console.log(copyArr);
+// output: ["hi", "hello"]
+
+// If we pass only 1 number to the method,
+// it will slice from that index to the end
+// of the array
+const otherCopyArr = ogArr.slice(1);
+console.log(otherCopyArr);
+// output: ["hello", "hey", "hola"]
+
+// If we want a copy of the whole array, we
+// call the method, with no arguments.
+const fullCopyArr = ogArr.slice();
+// output: ["hi", "hello", "hey", "hola"]
+
+// The original array remains unchanged.
+```
