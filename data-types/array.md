@@ -260,3 +260,28 @@ const fullCopyArr = ogArr.slice();
 
 // The original array remains unchanged.
 ```
+
+**array.reverse()**
+
+```js
+// As the name suggests, we use this method to
+// reverse the order of the items inside the array.
+
+const ourArr = [10, 20, "Hello", true, 30];
+
+console.log(ourArr.reverse());
+// output: [30, true, "Hello", 20, 10]
+
+// This method will change the original array.
+// If we want a new reversed array, we
+// can use the slice method, and chain the reverse method.
+
+const ogArr = [1, 2, 3, 4, 5];
+
+const newReversedArr = ogArr.slice().reverse();
+console.log(newReversedArr
+// output: [5, 4, 3, 2, 1]
+
+console.log(ogArr);
+// output: [1, 2, 3, 4, 5]
+```
