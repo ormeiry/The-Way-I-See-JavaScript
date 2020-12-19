@@ -302,14 +302,14 @@ const foundItem = arr.find(function (item, index, ourArr) {
   let itemLength = item.length;
   // We get the strings length
   // if it's 2, the expression below will be true
-  // and we will get back the current item.
+  // and the current item will be stored in the --founItem--.
   return itemLength === 2;
 });
 
 // It is important to understand that unlike the
 // --filter-- method, we don't get an array of
 // all the matching items. As soon as the --find--
-// method finds an item that fits, it stops imidiatly
+// method finds an item that fits, it stops immediately
 // and returns it and only it. The "is" inside the array
-// also meets the condition, but will be never reached.
+// also meets the condition but will be never reached.
 ```
