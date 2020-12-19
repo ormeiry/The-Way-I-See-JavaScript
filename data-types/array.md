@@ -302,7 +302,7 @@ const foundItem = arr.find(function (item, index, ourArr) {
   let itemLength = item.length;
   // We get the strings length
   // if it's 2, the expression below will be true
-  // and the current item will be stored in the --founItem--.
+  // and the current item will be stored in the --foundItem--.
   return itemLength === 2;
 });
 
