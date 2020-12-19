@@ -5,7 +5,7 @@ We can think of an array as a container of multiple variables.
 In JS, arrays are flexibles. We don't need to specify the length when creating a new array, unlike we do in other strong-typed programming languages. In addition to all that, we can store a mix of data types.
 
 ```js
-const ourFirstArray = ["a string", true, 10, "another string!"];
+const ourFirstArray = ['a string', true, 10, 'another string!'];
 // Now we have an array with 4 variables inside of it.
 // Arrays are zero-based, so the first item inside of it is at position 0.
 
@@ -57,8 +57,8 @@ arr[arr.length] = "I'm Last!";
 
 ```js
 // This method will add the item we pass to it to the end of the array.
-const arr = ["hello", "hi"];
-arr.push("Hey");
+const arr = ['hello', 'hi'];
+arr.push('Hey');
 
 console.log(arr); // output: ["hello", "hi", "Hey"]
 ```
@@ -69,7 +69,7 @@ console.log(arr); // output: ["hello", "hi", "Hey"]
 // As a counter to the push method, this one will remove the
 // last item in the array. We don't need to give it any arguments.
 
-const arr = ["hello", "hi", "Hey"];
+const arr = ['hello', 'hi', 'Hey'];
 arr.pop();
 
 console.log(arr); // output: ["hello", "hi"]
@@ -102,7 +102,7 @@ console.log(firstItem);
 // If we want to add an item to the start of the array,
 // we can use unshift method.
 
-const arr = ["I will move to index 1", "I will move to index 2"];
+const arr = ['I will move to index 1', 'I will move to index 2'];
 arr.unshift("I'm first!");
 
 console.log(arr);
@@ -237,11 +237,11 @@ console.log(ogArr); // output:  [1, 2, 3, 4, 5, 6]
 ```js
 // We use the slice method to get a copy
 // of an array.
-const ogArr = ["hi", "hello", "hey", "hola"];
+const ogArr = ['hi', 'hello', 'hey', 'hola'];
 
 // We tell the method where to start slicing and
 // where to stop, the end will not be included.
-// the numbers are the indexs.
+// the numbers are the index.
 const copyArr = ogArr.slice(0, 2);
 console.log(copyArr);
 // output: ["hi", "hello"]
@@ -267,7 +267,7 @@ const fullCopyArr = ogArr.slice();
 // As the name suggests, we use this method to
 // reverse the order of the items inside the array.
 
-const ourArr = [10, 20, "Hello", true, 30];
+const ourArr = [10, 20, 'Hello', true, 30];
 
 console.log(ourArr.reverse());
 // output: [30, true, "Hello", 20, 10]
@@ -284,4 +284,32 @@ console.log(newReversedArr);
 
 console.log(ogArr);
 // output: [1, 2, 3, 4, 5]
+```
+
+**array.find()**
+
+```js
+// We will use this method to find one item, the first
+// item in the array that answers the condition we test.
+
+const arr = ['hello', 'my', 'name', 'is', 'John', 'Doe'];
+
+const foundItem = arr.find(function (item, index, ourArr) {
+  // As in most of the methods we have seen before,
+  // on each iteration we get access to the item,
+  // its index and the array itself.
+
+  let itemLength = item.length;
+  // We get the strings length
+  // if it's 2, the expression below will be true
+  // and we will get back the current item.
+  return itemLength === 2;
+});
+
+// It is important to understand that unlike the
+// --filter-- method, we don't get an array of
+// all the matching items. As soon as the --find--
+// method finds an item that fits, it stops imidiatly
+// and returns it and only it. The "is" inside the array
+// also meets the condition, but will be never reached.
 ```
