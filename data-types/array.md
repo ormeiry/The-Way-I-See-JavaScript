@@ -36,13 +36,14 @@ const arr = [1, 10, -2, 26];
 arr[2] = "I've Changed!";
 console.log(arr);
 // output: [1, 10, "I've Changed!", 26];
+```
 
-// Add an item to the end of the list manually by using the length
-// property, it will give us the length of the array which is 4, and we
-// use it as an index. as you remember, arrays
-// index start at 0, so with 4 items we reached index 3.
-// 4 will be a new index.
+Add an item to the end of the list manually by using the length property, it will give us the length of the array which is 4, and we
+use it as an index. as you remember, arrays
+index start at 0, so with 4 items we reached index 3.
+4 will be a new index.
 
+```js
 arr[arr.length] = "I'm Last!";
 // output: [1, 10, "I've Changed!", 26, "I'm Last"];
 ```
@@ -51,36 +52,41 @@ arr[arr.length] = "I'm Last!";
 
 ## Let's see some of the main methods the array object has:
 
-<hr><br>
+<br>
 
-**array.push()**
+### **array.push()**
+
+This method will add the item we pass to it to the end of the array.
 
 ```js
-// This method will add the item we pass to it to the end of the array.
 const arr = ['hello', 'hi'];
 arr.push('Hey');
 
 console.log(arr); // output: ["hello", "hi", "Hey"]
 ```
 
-**array.pop()**
+<br>
+
+### **array.pop()**
+
+As a counter to the push method, this one will remove the
+last item in the array. We don't need to give it any arguments.
 
 ```js
-// As a counter to the push method, this one will remove the
-// last item in the array. We don't need to give it any arguments.
-
 const arr = ['hello', 'hi', 'Hey'];
 arr.pop();
 
 console.log(arr); // output: ["hello", "hi"]
 ```
 
-**array.shift()**
+<br>
+
+### **array.shift()**
+
+Now that we know how to remove the last item,
+this is how to remove the first one.
 
 ```js
-// Now that we know how to remove the last item,
-// this is how to remove the first one.
-
 const arr = [4, 6, 19, 20];
 
 // It returns the item it removes, so we can store it.
@@ -96,12 +102,14 @@ console.log(firstItem);
 // output: 6;
 ```
 
-**array.unshift()**
+<br>
+
+### **array.unshift()**
+
+If we want to add an item to the start of the array,
+we can use unshift method.
 
 ```js
-// If we want to add an item to the start of the array,
-// we can use unshift method.
-
 const arr = ['I will move to index 1', 'I will move to index 2'];
 arr.unshift("I'm first!");
 
@@ -109,11 +117,14 @@ console.log(arr);
 // output:  ["I'm first!", "I will move to index 1", "I will move to index 2"]
 ```
 
-**array.concat()**
+<br>
+
+### **array.concat()**
+
+We use this method in order to take the original array content, and add to it.
+This method returns a brand new array without mutating the original one.
 
 ```js
-// We use this method in order to take the original array content, and add to it.
-// This method returns a brand new array without mutating the original one.
 
 const ogArr = ['this', 'will', 'not', 'change!'];
 const otherArr = ['Will', 'I', 'join the new array?', true];
@@ -140,17 +151,20 @@ console.log(joinedArr);
 ];
 ```
 
-**array.some()**
+<br>
+
+### **array.some()**
+
+Let's say we want to check if our array has some item that answers a condition.
+We want to know if the array contains a number larger than 20.
+<br>
+
+We call the **some** method, and pass a function that runs for
+each item in the array, inside that function we get access to
+the current item, the index of that item, and the array itself.
 
 ```js
-// Let's say we want to check if our array has some
-// item that answers a condition.
-// We want to know if the array contains a number larger than 20.
-
 const numArr = [20, 19, 26, 10, 12];
-// We call the --some-- method, and pass a function that runs for
-// each item in the array, inside that function we get access to
-// the current item, the index of that item, and the array itself.
 
 numArr.some(function (item, index, ourArray) {
   // now that we are inside the function body, for each
@@ -167,13 +181,15 @@ otherNumArr.some(function (item, index, ourArray) {
 // returns false
 ```
 
-**array.every()**
+<br>
+
+### **array.every()**
+
+Just like in the **some** method above, this method checks the values
+inside the array, and returns a boolean. The difference is, that the
+**every** method returns true only if all the values answer the condition
 
 ```js
-// Just like in the --some-- method above, this method checks the values
-// inside the array,  and returns a boolean. The difference is, that the
-// --every-- method returns true only if all the values answer the condition
-
 const numArr = [20, 2, 11, 130, 18];
 numArr.every(function (item, index, ourArray) {
   return item >= 10;
@@ -185,13 +201,15 @@ otherNumArr.every(function (item, index, ourArray) {
 }); // This return true!
 ```
 
-**array.filter()**
+<br>
+
+### **array.filter()**
+
+As the name suggests, this method filters an array,
+and returns the new array containing only the items
+that passed the given "test".
 
 ```js
-// As the name suggests, this method filters an array,
-// and returns the new array containing only the items
-// that passed the given "test".
-
 const initialArr = [2, 3, 5, 10, 4, 1];
 // now we create a new constant to hold the result.
 
@@ -200,7 +218,6 @@ const filteredArr = initialArr.filter(function(item, index, ourArray) {
 	// Remember, we run this function and have access to each
 	// item and its index, so the first item will be 2 with the index of 0
 	// the second item is 3 with the index of 1, and so on.
-
 	return item > index
 }
 console.log(filteredArr); // output: [2, 3, 5, 10]
@@ -208,17 +225,20 @@ console.log(filteredArr); // output: [2, 3, 5, 10]
 // The initialArr stays the same as it was.
 ```
 
-**array.map()**
+<br>
+
+### **array.map()**
+
+The **map** method is used to create a new array
+out of the original one. We can perform an action on
+each of the array items when iterating through them.
+<br>
+
+The method returns a new array containing the results
+of our actions.
 
 ```js
-// The --map-- method is used to create a new array
-// out of the original one. We can perform an action on
-// each of the array items when iterating through them.
-
 const ogArr = [1, 2, 3, 4, 5, 6];
-
-// The method returns a new array containing the results
-// of our actions.
 
 const newArr = ogArr.map(function (item, index, ourArray) {
   // Every item in the array will be multiplied by 3
@@ -232,50 +252,60 @@ console.log(newArr); // output:  [3, 6, 9, 12, 15, 18]
 console.log(ogArr); // output:  [1, 2, 3, 4, 5, 6]
 ```
 
-**array.slice()**
+<br>
+
+### **array.slice()**
+
+We use the slice method to get a copy of an array.
+We tell the method where to start slicing and
+where to stop, the end will not be included.
 
 ```js
-// We use the slice method to get a copy
-// of an array.
 const ogArr = ['hi', 'hello', 'hey', 'hola'];
 
-// We tell the method where to start slicing and
-// where to stop, the end will not be included.
-// the numbers are the index.
 const copyArr = ogArr.slice(0, 2);
+// the numbers are the index.
 console.log(copyArr);
 // output: ["hi", "hello"]
+```
 
-// If we pass only 1 number to the method,
-// it will slice from that index to the end
-// of the array
+If we pass only 1 number to the method, it will slice from that index to the end of the array.
+
+```js
 const otherCopyArr = ogArr.slice(1);
 console.log(otherCopyArr);
 // output: ["hello", "hey", "hola"]
+```
 
-// If we want a copy of the whole array, we
-// call the method, with no arguments.
+If we want a copy of the whole array, we
+call the method, with no arguments.
+
+```js
 const fullCopyArr = ogArr.slice();
 // output: ["hi", "hello", "hey", "hola"]
 
 // The original array remains unchanged.
 ```
 
-**array.reverse()**
+<br>
+
+### **array.reverse()**
+
+As the name suggests, we use this method to
+reverse the order of the items inside the array.
 
 ```js
-// As the name suggests, we use this method to
-// reverse the order of the items inside the array.
-
 const ourArr = [10, 20, 'Hello', true, 30];
 
 console.log(ourArr.reverse());
 // output: [30, true, "Hello", 20, 10]
+```
 
-// This method will change the original array.
-// If we want a new reversed array, we
-// can use the slice method, and chain the reverse method.
+This method will change the original array.
+If we want a new reversed array, we
+can use the slice method, and chain the reverse method.
 
+```js
 const ogArr = [1, 2, 3, 4, 5];
 
 const newReversedArr = ogArr.slice().reverse();
@@ -286,12 +316,14 @@ console.log(ogArr);
 // output: [1, 2, 3, 4, 5]
 ```
 
-**array.find()**
+<br>
+
+### **array.find()**
+
+We will use this method to find one item, the first
+item in the array that answers the condition we test.
 
 ```js
-// We will use this method to find one item, the first
-// item in the array that answers the condition we test.
-
 const arr = ['hello', 'my', 'name', 'is', 'John', 'Doe'];
 
 const foundItem = arr.find(function (item, index, ourArr) {
@@ -305,11 +337,11 @@ const foundItem = arr.find(function (item, index, ourArr) {
   // and the current item will be stored in the --foundItem--.
   return itemLength === 2;
 });
-
-// It is important to understand that unlike the
-// --filter-- method, we don't get an array of
-// all the matching items. As soon as the --find--
-// method finds an item that fits, it stops immediately
-// and returns it and only it. The "is" inside the array
-// also meets the condition but will be never reached.
 ```
+
+It is important to understand that unlike the
+**filter** method, we don't get an array of
+all the matching items. As soon as the **find**
+method finds an item that fits, it stops immediately
+and returns it and only it. The "is" inside the array
+also meets the condition but will be never reached.
