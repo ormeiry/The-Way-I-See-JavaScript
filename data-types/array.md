@@ -345,3 +345,67 @@ all the matching items. As soon as the **find**
 method finds an item that fits, it stops immediately
 and returns it and only it. The "is" inside the array
 also meets the condition but will be never reached.
+<br>
+
+### **array.reduce**
+
+The **reduce** method takes one function that runs like so:
+
+- A function with 4 arguments
+  - **accumulator:**
+    <br>
+    The sum or result of the method when adding all the array items one at a time.
+  - **currentValue:**
+    <br>
+    The current item in the array that is looped over at the moment.
+  - **currentIndex:**
+    <br>
+    The current index that is looped over.
+  - **array:**
+    <br>
+    The original array.
+
+<br>
+And one optional argument, that is the initial value.
+
+The returned value after all this is the accumulated value at the end.
+
+It's hard to understand without an example, so let's take a look at a simple one.
+
+```js
+const arr = [1, 2, 3, 4, 5, 6];
+
+// arr.reduce(function, initialValue)
+const sumOfArr = arr.reduce(function (
+  accumulator,
+  currentValue,
+  currentIndex,
+  array
+) {
+  // We run a function with the arguments we talked about above.
+
+  // For each item in the array we take its value (currentValue)
+  // and add to the total sum (accumulator).
+  return accumulator + currentValue;
+},
+0);
+// The second argument to the method is the initial value we want to start with, in this case it's 0.
+
+console.log(sumOfArr);
+// output: 21
+```
+
+Ok, let's try to break it down:
+
+- We give an initial value of 0, this value will be the accumulator for the first time the function runs.
+- The function runs for the first index and it gets the currentValue (1)
+- We return then -> 0 + 1. Now the accumulator = 1.
+- The function now runs for the second time and on index 1, currentValue = 2.
+- We again return accumulator + currentValue -> 1 + 2. accumulator = 3.
+- Function runs for the third item, currentValue = 3.
+- We again return accumulator + currentValue -> 3 + 3. accumulator = 6.
+
+All the way to the end of the array -> 6 + 4 -> 10 + 5 -> 15 + 6.
+So at the end of it all, the **sumOfArr** holds the value 21.
+
+**We can do so much more with this method, we will definitely see more of it later on.**
