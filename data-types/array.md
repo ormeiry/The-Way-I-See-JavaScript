@@ -48,6 +48,21 @@ arr[arr.length] = "I'm Last!";
 // output: [1, 10, "I've Changed!", 26, "I'm Last"];
 ```
 
+### **Array.isArray()**
+
+If we want to check if some data is an array, we can use this Array method like so:
+
+```js
+const str = "I'm not an array";
+const num = 15;
+const arr = ['this', 'will', 'return', 'true'];
+
+// It will return false if the value passed to it is not an array, and true if it is.
+console.log(Array.isArray(str)); // output: false
+console.log(Array.isArray(num)); // output: false
+console.log(Array.isArray(arr)); // output: true
+```
+
 <hr><br>
 
 ## Let's see some of the main methods the array object has:
