@@ -168,6 +168,33 @@ console.log(joinedArr);
 
 <br>
 
+### **array.forEach()**
+
+When we want to do something for each item in the array, this is the method to go to.
+The forEach method will run a function for every item, one at a time. It will start at
+index 0 and finish at the end of the array.
+Inside the function, we get access to the current item, its index, and the array itself.
+
+```js
+const strArr = ['Hello!,', 'I', 'hope', 'you', 'enjoy', 'this!'];
+
+// Let's console log each item.
+strArr.forEach(function (item, index, ourArr) {
+  // The item is the current string, we start at index 0.
+  console.log(index, item);
+});
+/* output: 
+ 0 "Hello!,"
+ 1 "I"
+ 2 "hope"
+ 3 "you"
+ 4 "enjoy"
+ 5 "this!"  
+*/
+```
+
+<br>
+
 ### **array.some()**
 
 Let's say we want to check if our array has some item that answers a condition.
