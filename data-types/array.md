@@ -2,7 +2,7 @@
 
 Arrays are one of the most commonly used data types.
 We can think of an array as a container of multiple variables.
-In JS, arrays are flexibles. We don't need to specify the length when creating a new array, unlike we do in other strong-typed programming languages. In addition to all that, we can store a mix of data types.
+In JS, arrays are flexible. We don't need to specify the length when creating a new array, unlike we do in other strong-typed programming languages. In addition, we can store a mix of data types.
 
 ```js
 const ourFirstArray = ['a string', true, 10, 'another string!'];
