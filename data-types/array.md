@@ -451,3 +451,29 @@ All the way to the end of the array -> 6 + 4 -> 10 + 5 -> 15 + 6.
 So at the end of it all, the **sumOfArr** holds the value 21.
 
 **We can do so much more with this method, we will definitely see more of it later on.**
+
+<br>
+
+### **array.join()**
+
+In this method, we take an array of strings and join them together into one long string.
+We need to "tell" the method, how we want to join the strings. For example, we can pass '--' as an argument. Let's see that in action.
+
+```js
+const stringArr = ['Hello', 'everybody,', 'nice', 'to', 'meet', 'you!'];
+
+// We can store the returned string in a variable.
+const str1 = stringArr.join('--');
+console.log(str1);
+// output: Hello--everybody,--nice--to--meet--you!
+
+// If we pass no argument, each string will be followed by a comma.
+const str2 = stringArr.join();
+console.log(str2);
+// output: Hello,everybody,,nice,to,meet,you!
+
+// If we want to create a scentence, we pass a string with a space in it.
+const str3 = stringArr.join(' ');
+console.log(str3);
+// output: hello everybody, nice to meet you!
+```
