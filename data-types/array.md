@@ -4,8 +4,10 @@ Arrays are one of the most commonly used data types.
 We can think of an array as a container of multiple variables.
 In JS, arrays are flexible. We don't need to specify the length when creating a new array, unlike we do in other strong-typed programming languages. In addition, we can store a mix of data types.
 
+<br>
+
 ```js
-const ourFirstArray = ['a string', true, 10, 'another string!'];
+const ourFirstArray = ["a string", true, 10, "another string!"];
 // Now we have an array with 4 variables inside of it.
 // Arrays are zero-based, so the first item inside of it is at position 0.
 
@@ -55,13 +57,30 @@ If we want to check if some data is an array, we can use this Array method like 
 ```js
 const str = "I'm not an array";
 const num = 15;
-const arr = ['this', 'will', 'return', 'true'];
+const arr = ["this", "will", "return", "true"];
 
 // It will return false if the value passed to it is not an array, and true if it is.
 console.log(Array.isArray(str)); // output: false
 console.log(Array.isArray(num)); // output: false
 console.log(Array.isArray(arr)); // output: true
 ```
+
+<br>
+
+One important thing to understand about arrays is that when we make a copy of an array, we need to make sure that we are just making a shallow copy of it. By default, when we assign an array variable to another variable, both of them will point to the same array in memory.
+
+```js
+const ogArr = [1, 2, 3, 4, 5];
+const copyArr = ogArr;
+
+ogArr[0] = 10;
+
+console.log(ogArr); // output: [10, 2, 3, 4, 5]
+console.log(copyArr); // output: [10, 2, 3, 4, 5]
+```
+
+As you can see in the example above, we are trying to make a copy of the ogArr, and we end up with ogArr and copyArr pointing at the same place in memory, where the ogArr lives. This behivior called **Pass by reference**.
+We will learn how to make a copy "the right way", and more about it later on.
 
 <hr><br>
 
@@ -74,8 +93,8 @@ console.log(Array.isArray(arr)); // output: true
 This method will add the item we pass to it to the end of the array.
 
 ```js
-const arr = ['hello', 'hi'];
-arr.push('Hey');
+const arr = ["hello", "hi"];
+arr.push("Hey");
 
 console.log(arr); // output: ["hello", "hi", "Hey"]
 ```
@@ -88,7 +107,7 @@ As a counter to the push method, this one will remove the
 last item in the array. We don't need to give it any arguments.
 
 ```js
-const arr = ['hello', 'hi', 'Hey'];
+const arr = ["hello", "hi", "Hey"];
 arr.pop();
 
 console.log(arr); // output: ["hello", "hi"]
@@ -125,7 +144,7 @@ If we want to add an item to the start of the array,
 we can use unshift method.
 
 ```js
-const arr = ['I will move to index 1', 'I will move to index 2'];
+const arr = ["I will move to index 1", "I will move to index 2"];
 arr.unshift("I'm first!");
 
 console.log(arr);
@@ -176,7 +195,7 @@ index 0 and finish at the end of the array.
 Inside the function, we get access to the current item, its index, and the array itself.
 
 ```js
-const strArr = ['Hello!,', 'I', 'hope', 'you', 'enjoy', 'this!'];
+const strArr = ["Hello!,", "I", "hope", "you", "enjoy", "this!"];
 
 // Let's console log each item.
 strArr.forEach(function (item, index, ourArr) {
@@ -303,7 +322,7 @@ We tell the method where to start slicing and
 where to stop, the end will not be included.
 
 ```js
-const ogArr = ['hi', 'hello', 'hey', 'hola'];
+const ogArr = ["hi", "hello", "hey", "hola"];
 
 const copyArr = ogArr.slice(0, 2);
 // the numbers are the index.
@@ -337,7 +356,7 @@ As the name suggests, we use this method to
 reverse the order of the items inside the array.
 
 ```js
-const ourArr = [10, 20, 'Hello', true, 30];
+const ourArr = [10, 20, "Hello", true, 30];
 
 console.log(ourArr.reverse());
 // output: [30, true, "Hello", 20, 10]
@@ -366,7 +385,7 @@ We will use this method to find one item, the first
 item in the array that answers the condition we test.
 
 ```js
-const arr = ['hello', 'my', 'name', 'is', 'John', 'Doe'];
+const arr = ["hello", "my", "name", "is", "John", "Doe"];
 
 const foundItem = arr.find(function (item, index, ourArr) {
   // As in most of the methods we have seen before,
@@ -460,10 +479,10 @@ In this method, we take an array of strings and join them together into one long
 We need to "tell" the method, how we want to join the strings. For example, we can pass '--' as an argument. Let's see that in action.
 
 ```js
-const stringArr = ['Hello', 'everybody,', 'nice', 'to', 'meet', 'you!'];
+const stringArr = ["Hello", "everybody,", "nice", "to", "meet", "you!"];
 
 // We can store the returned string in a variable.
-const str1 = stringArr.join('--');
+const str1 = stringArr.join("--");
 console.log(str1);
 // output: Hello--everybody,--nice--to--meet--you!
 
@@ -473,7 +492,7 @@ console.log(str2);
 // output: Hello,everybody,,nice,to,meet,you!
 
 // If we want to create a scentence, we pass a string with a space in it.
-const str3 = stringArr.join(' ');
+const str3 = stringArr.join(" ");
 console.log(str3);
 // output: hello everybody, nice to meet you!
 ```
