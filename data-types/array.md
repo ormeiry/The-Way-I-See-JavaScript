@@ -79,7 +79,7 @@ console.log(ogArr); // output: [10, 2, 3, 4, 5]
 console.log(copyArr); // output: [10, 2, 3, 4, 5]
 ```
 
-As you can see in the example above, we are trying to make a copy of the ogArr, and we end up with ogArr and copyArr pointing at the same place in memory, where the ogArr lives. This behivior called **Pass by reference**.
+As you can see in the example above, we are trying to make a copy of the ogArr, and we end up with ogArr and copyArr pointing at the same place in memory, where the ogArr lives. This behavior is called **Pass by reference**.
 We will learn how to make a copy "the right way", and more about it later on.
 
 <hr><br>
