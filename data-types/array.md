@@ -339,7 +339,8 @@ console.log(otherCopyArr);
 ```
 
 If we want a copy of the whole array, we
-call the method, with no arguments.
+call the method, with no arguments. We went over why this is important
+and how it works, earlier in this document..
 
 ```js
 const fullCopyArr = ogArr.slice();
@@ -347,6 +348,8 @@ const fullCopyArr = ogArr.slice();
 
 // The original array remains unchanged.
 ```
+
+This way, we are making a copy of the whole array, and not pointing to the original array. if we change one of them now, it will not change the other.
 
 <br>
 
