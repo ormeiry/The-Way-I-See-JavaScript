@@ -214,6 +214,25 @@ strArr.forEach(function (item, index, ourArr) {
 
 <br>
 
+### **array.includes()**
+
+With this method, we can find out if a given value exists inside an array. This method will return a boolean, true if it exists, false if not.
+
+```js
+const arr = [10, 20, "cat", 40, "dog", 200];
+
+console.log(arr.includes(30));
+// output: false
+console.log(arr.includes("cat"));
+// output: true
+console.log(arr.includes(40));
+// output: true
+console.log(arr.includes("mouse"));
+// output: false
+```
+
+<br>
+
 ### **array.some()**
 
 Let's say we want to check if our array has some item that answers a condition.
