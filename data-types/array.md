@@ -372,6 +372,39 @@ This way, we are making a copy of the whole array, and not pointing to the origi
 
 <br>
 
+### **array.splice()**
+
+With this method, we can insert items into an array. We can choose where to insert it, how many items to replace with the new item (we can choose not to replace and just insert.), and what we want to insert.
+Let's take a look at some examples.
+
+```js
+const arr = ["apple", "pie", "orange"];
+
+// The first argument we pass in is the index we want to change,
+// the second is how many items we want to remove from that index
+// and after, and the third (and beyond) is the item we want to insert.
+
+arr.splice(1, 0, "potato");
+// We insert "potato" at index 1, and remove 0 items.
+console.log(arr); // output: ["apple", "potato", "pie", "orange"]
+
+arr.splice(2, 1, "milk", "wine");
+// We insert "milk" & "wine", at index 2, and remove 1 item ("pie").
+console.log(arr); // output: ["apple", "potato", "milk", "wine", "orange"]
+
+arr.splice(0, 1);
+// We remove 1 item at index 0.
+console.log(arr); // output: ["potato", "milk", "wine", "orange"]
+
+// If we choose to remove 1 item or more, an array of them will return
+// to us from the method, so we can store it and use it.
+const newArr = arr.splice(2, 2, "lemon");
+console.log(arr); // output: ["potato", "milk", "lemon"]
+console.log(newArr); // output: ["wine", "orange"]
+```
+
+<br>
+
 ### **array.reverse()**
 
 As the name suggests, we use this method to
