@@ -9,7 +9,7 @@ A function is a piece of code that we write when we need some task done. We can 
 function ourFuncNam(/* parameters goes here */) {
   // code goes here
   return; // something
-}
+};
 
 // call the function
 ourFuncNam(/* pass arguments here */);
@@ -30,7 +30,7 @@ Say we need a function to take any number and return that number times 10.
 ```js
 function timesTen(num) {
   return num * 10;
-}
+};
 
 // now, we can call that function and pass a num to it.
 // it will always provide the same outcome (the num times 10).
