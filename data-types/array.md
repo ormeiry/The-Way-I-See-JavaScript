@@ -6,8 +6,12 @@ In JS, arrays are flexible. We don't need to specify the length when creating a 
 
 <br>
 
+### In this section, we are going to work with functions. If you are not familiar with what are functions and how they work, take a look at -> [JS Function](.././others/function.md).
+
+<br>
+
 ```js
-const ourFirstArray = ["a string", true, 10, "another string!"];
+const ourFirstArray = ['a string', true, 10, 'another string!'];
 // Now we have an array with 4 variables inside of it.
 // Arrays are zero-based, so the first item inside of it is at position 0.
 
@@ -57,7 +61,7 @@ If we want to check if some data is an array, we can use this Array method like 
 ```js
 const str = "I'm not an array";
 const num = 15;
-const arr = ["this", "will", "return", "true"];
+const arr = ['this', 'will', 'return', 'true'];
 
 // It will return false if the value passed to it is not an array, and true if it is.
 console.log(Array.isArray(str)); // output: false
@@ -93,8 +97,8 @@ We will learn how to make a copy "the right way", and more about it later on.
 This method will add the item we pass to it to the end of the array.
 
 ```js
-const arr = ["hello", "hi"];
-arr.push("Hey");
+const arr = ['hello', 'hi'];
+arr.push('Hey');
 
 console.log(arr); // output: ["hello", "hi", "Hey"]
 ```
@@ -107,7 +111,7 @@ As a counter to the push method, this one will remove the
 last item in the array. We don't need to give it any arguments.
 
 ```js
-const arr = ["hello", "hi", "Hey"];
+const arr = ['hello', 'hi', 'Hey'];
 arr.pop();
 
 console.log(arr); // output: ["hello", "hi"]
@@ -144,7 +148,7 @@ If we want to add an item to the start of the array,
 we can use unshift method.
 
 ```js
-const arr = ["I will move to index 1", "I will move to index 2"];
+const arr = ['I will move to index 1', 'I will move to index 2'];
 arr.unshift("I'm first!");
 
 console.log(arr);
@@ -195,7 +199,7 @@ index 0 and finish at the end of the array.
 Inside the function, we get access to the current item, its index, and the array itself.
 
 ```js
-const strArr = ["Hello!,", "I", "hope", "you", "enjoy", "this!"];
+const strArr = ['Hello!,', 'I', 'hope', 'you', 'enjoy', 'this!'];
 
 // Let's console log each item.
 strArr.forEach(function (item, index, ourArr) {
@@ -219,15 +223,15 @@ strArr.forEach(function (item, index, ourArr) {
 With this method, we can find out if a given value exists inside an array. This method will return a boolean, true if it exists, false if not.
 
 ```js
-const arr = [10, 20, "cat", 40, "dog", 200];
+const arr = [10, 20, 'cat', 40, 'dog', 200];
 
 console.log(arr.includes(30));
 // output: false
-console.log(arr.includes("cat"));
+console.log(arr.includes('cat'));
 // output: true
 console.log(arr.includes(40));
 // output: true
-console.log(arr.includes("mouse"));
+console.log(arr.includes('mouse'));
 // output: false
 ```
 
@@ -341,7 +345,7 @@ We tell the method where to start slicing and
 where to stop, the end will not be included.
 
 ```js
-const ogArr = ["hi", "hello", "hey", "hola"];
+const ogArr = ['hi', 'hello', 'hey', 'hola'];
 
 const copyArr = ogArr.slice(0, 2);
 // the numbers are the index.
@@ -378,17 +382,17 @@ With this method, we can insert items into an array. We can choose where to inse
 Let's take a look at some examples.
 
 ```js
-const arr = ["apple", "pie", "orange"];
+const arr = ['apple', 'pie', 'orange'];
 
 // The first argument we pass in is the index we want to change,
 // the second is how many items we want to remove from that index
 // and after, and the third (and beyond) is the item we want to insert.
 
-arr.splice(1, 0, "potato");
+arr.splice(1, 0, 'potato');
 // We insert "potato" at index 1, and remove 0 items.
 console.log(arr); // output: ["apple", "potato", "pie", "orange"]
 
-arr.splice(2, 1, "milk", "wine");
+arr.splice(2, 1, 'milk', 'wine');
 // We insert "milk" & "wine", at index 2, and remove 1 item ("pie").
 console.log(arr); // output: ["apple", "potato", "milk", "wine", "orange"]
 
@@ -398,7 +402,7 @@ console.log(arr); // output: ["potato", "milk", "wine", "orange"]
 
 // If we choose to remove 1 item or more, an array of them will return
 // to us from the method, so we can store it and use it.
-const newArr = arr.splice(2, 2, "lemon");
+const newArr = arr.splice(2, 2, 'lemon');
 console.log(arr); // output: ["potato", "milk", "lemon"]
 console.log(newArr); // output: ["wine", "orange"]
 ```
@@ -411,7 +415,7 @@ As the name suggests, we use this method to
 reverse the order of the items inside the array.
 
 ```js
-const ourArr = [10, 20, "Hello", true, 30];
+const ourArr = [10, 20, 'Hello', true, 30];
 
 console.log(ourArr.reverse());
 // output: [30, true, "Hello", 20, 10]
@@ -440,7 +444,7 @@ We will use this method to find one item, the first
 item in the array that answers the condition we test.
 
 ```js
-const arr = ["hello", "my", "name", "is", "John", "Doe"];
+const arr = ['hello', 'my', 'name', 'is', 'John', 'Doe'];
 
 const foundItem = arr.find(function (item, index, ourArr) {
   // As in most of the methods we have seen before,
@@ -534,10 +538,10 @@ In this method, we take an array of strings and join them together into one long
 We need to "tell" the method, how we want to join the strings. For example, we can pass '--' as an argument. Let's see that in action.
 
 ```js
-const stringArr = ["Hello", "everybody,", "nice", "to", "meet", "you!"];
+const stringArr = ['Hello', 'everybody,', 'nice', 'to', 'meet', 'you!'];
 
 // We can store the returned string in a variable.
-const str1 = stringArr.join("--");
+const str1 = stringArr.join('--');
 console.log(str1);
 // output: Hello--everybody,--nice--to--meet--you!
 
@@ -547,7 +551,7 @@ console.log(str2);
 // output: Hello,everybody,,nice,to,meet,you!
 
 // If we want to create a scentence, we pass a string with a space in it.
-const str3 = stringArr.join(" ");
+const str3 = stringArr.join(' ');
 console.log(str3);
 // output: hello everybody, nice to meet you!
 ```
