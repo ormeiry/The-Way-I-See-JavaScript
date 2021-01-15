@@ -86,9 +86,9 @@ There are some differences between normal functions and arrow functions, and we 
 
 <br>
 
-### Before we continue this section, let's try to break down the core functionality of a function (pun not intended).
+### Before we continue this section, let's try to break down the core functionality of a function. (pun not intended)
 
-- It can return a value, we can store it in a variable and use it.
+- It can return a value that we can store in a variable and use it.
 - It can take parameters, and we pass them as arguments when invoking the function.
-- It is used for cases when we want some predicted behavior to run over and over again (take a num and always return it times 10).
-- It gives us the power to not repeat lines of code (follow the rule of "Do not repeat yourself).
+- It is used for cases when we want some predicted behavior to run over and over again. (take a num and always return it times 10)
+- It gives us the power of not repeating lines of code. (we follow the rule of "Do not repeat yourself")
