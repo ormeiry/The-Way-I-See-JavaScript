@@ -44,10 +44,7 @@ const valThree = timesTen(8);
 console.log(valOne, valTwo, valThree);
 // output: 10, 120, 80
 ```
-
-<br>
-
-### Another way (on modern js) of writing a function is using an Arrow Function, syntax:
+### Another way (modern js) of writing a function is using an Arrow Function, syntax:
 
 ```js
 const ourArrowFunc = (num) => {
