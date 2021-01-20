@@ -44,6 +44,7 @@ const valThree = timesTen(8);
 console.log(valOne, valTwo, valThree);
 // output: 10, 120, 80
 ```
+
 ### Another way (modern js) of writing a function is using an Arrow Function, syntax:
 
 ```js
@@ -89,3 +90,44 @@ There are some differences between normal functions and arrow functions, and we 
 - It can take parameters, and we pass them as arguments when invoking the function.
 - It is used for cases when we want some predicted behavior to run over and over again. (take a num and always return it times 10)
 - It gives us the power of not repeating lines of code. (we follow the rule of "Do not repeat yourself")
+
+<br>
+
+Ok, so now we had the chance to see functions in action, but the examples we have seen are too simple, it's hard to understand the power of functions without some real-world examples. Let's try and create a "real world function".
+
+<br>
+
+Say we have a webpage, and we want to add a listener to whenever a user clicks on a button.
+
+### index.html
+
+```html
+<html>
+  <body>
+    <h1>Click The Button!</h1>
+    <button id="btn">If You Click I Will Say Hello!</button>
+
+    <script src="./ourJsFileName.js"></script>
+  </body>
+</html>
+```
+
+### ourJsFileName.js
+
+```js
+// We select the button from our HTML using its id
+// and store it in a variable.
+
+const btn = document.querySelector('#btn');
+// for id's we use the # sign and the id name we gave to the element.
+
+// We create the function
+const sayHello = () => {
+  alert('Hello!!!');
+};
+
+// We add the event listener, saying we are listening
+// for a click on the button, and we want to envoke the
+// sayHello function when the event takes place.
+btn.addEventListener('click', sayHello);
+```
