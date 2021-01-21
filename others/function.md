@@ -1,6 +1,6 @@
 # Function
 
-A function is a piece of code that we write when we need some task done. We can write a function that accepts some parameters, checks things, performs actions, and returns a value.
+A function is a piece of code that we write when we need some task done. We can write a function that accepts some parameters, checks things, performs actions, and returns a value. In the JS world, functions are one of the most important things to master.
 <br>
 
 ### We can write a function declaration:
