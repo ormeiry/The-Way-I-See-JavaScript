@@ -42,7 +42,7 @@ whatAmI = 5 + '5'; //  it's now a string "55".
 ```
 
 Another data type is a boolean, we as programmers use booleans to control our flow of the code, determine whether or not to activate something, is a user authenticated, is something being loaded and we need to display a loading spinner, and much more...
-
+[See JS Function](.././others/function.md)
 ```js
 let isDataReady = false;
 
