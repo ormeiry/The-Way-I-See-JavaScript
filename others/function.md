@@ -119,7 +119,7 @@ Say we have a webpage, and we want to add a listener to whenever a user clicks o
 // and store it in a variable.
 
 const btn = document.querySelector('#btn');
-// for id's we use the # sign and the id name we gave to the element.
+// for ID, we use the # sign and the id name we gave to the element.
 
 // We create the function
 const sayHello = () => {
@@ -131,3 +131,80 @@ const sayHello = () => {
 // sayHello function when the event takes place.
 btn.addEventListener('click', sayHello);
 ```
+
+So, you might be thinking, OK... functions are nice, but do I have to use them?.
+In most cases where we create a helper function, we don't **have to**, but it will be bad not to.
+
+Let's look at this example:
+
+```js
+const user = {
+  name: 'Bob',
+  age: 22,
+  otherData: [{ email: 'BOB@Bobson.com' }, { phoneNumber: '111-111-222-2222' }],
+};
+
+if (user.age > 18) {
+  const response = someApiCall(user.otherData);
+  if (response.isApiCheckWasOk) {
+    alert(`Hi ${user.name}, The test was ok, keep going.`);
+  } else {
+    alert(`Hi ${user.name}, something went wrong.`);
+  }
+} else {
+  alert('Must be over 18');
+}
+
+// Now, if we had another user, we had to write the whole thing all over again and fix it for that said user.
+
+const userTwo = {
+  name: 'John',
+  age: 50,
+  otherData: [
+    { email: 'John@johnson.com' },
+    { phoneNumber: '111-111-555-7777' },
+  ],
+};
+
+if (userTwo.age > 18) {
+  const response = someApiCall(userTwo.otherData);
+  if (response.isApiCheckWasOk) {
+    alert(`Hi ${userTwo.name}, The test was ok, keep going.`);
+  } else {
+    alert(`Hi ${userTwo.name}, something went wrong.`);
+  }
+} else {
+  alert('Must be over 18');
+}
+
+// well, if it's just these two, I guess it's fine(not really).
+// What if we had 100 users?. That's why we write functions.
+```
+
+The function will look this:
+
+```js
+function makeApiCallIfAgeIsOk(userObj) {
+  if (userObj.age > 18) {
+    const response = someApiCall(userObj.otherData);
+    if (response.isApiCheckWasOk) {
+      alert(`Hi ${userObj.name}, The test was ok, keep going.`);
+    } else {
+      alert(`Hi ${userObj.name}, something went wrong.`);
+    }
+  } else {
+    alert('Must be over 18');
+  }
+}
+
+// Now, we only have to invoke the function and pass the user we want.
+
+makeApiCallIfAgeIsOk(user);
+makeApiCallIfAgeIsOk(userTwo);
+// makeApiCallIfAgeIsOk(userThree)
+// makeApiCallIfAgeIsOk(userfour)
+// makeApiCallIfAgeIsOk(userFive)
+// makeApiCallIfAgeIsOk(userSix)
+```
+
+I know this example is not so realistic, but I believe you got the idea.
