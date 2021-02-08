@@ -137,6 +137,8 @@ In most cases where we create a helper function, we don't **have to**, but it wi
 
 Let's look at this example:
 
+**For better understanding of [JS Objects](.././data-types/object.md).**
+
 ```js
 const user = {
   name: 'Bob',
