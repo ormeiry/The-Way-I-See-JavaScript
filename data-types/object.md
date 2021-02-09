@@ -30,4 +30,4 @@ console.log(shoppingList.wine.white); // output: 1
 console.log(shoppingList.someNoneExistingKey); // output: undefined
 ```
 
-As you can see from the example above, the **shoppingList** holds the key-value pairs inside and we use them with the "." after the shoppingList. Wine is a nested object that holds its own key-value pairs. We get them by using the "." one more time -> **shoppingList** -> then the **"."** to get a reference to the **wine** -> then another **"."** to get a reference to the keys inside it. If we try to get a value inside an object by using a key that does not exist, we get back **undefined**.
+As you can see, the **shoppingList** holds the key-value pairs inside and we use them with the "." after the shoppingList. Wine is a nested object that holds its own key-value pairs. We get them by using the **"."** one more time -> **shoppingList** -> then the **"."** to get a reference to the **wine** -> then another **"."** to get a reference to the keys inside it. If we try to get a value inside an object by using a key that does not exist, we get back **undefined**.
