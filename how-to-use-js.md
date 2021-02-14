@@ -1,6 +1,6 @@
 # How To Use JavaScript?
 
-### So we want to write some JS code, and we want to learn how to use it, now the question is - How?.
+### So we want to write some JS code, now the question is - How?.
 
 ### Well, Javascript, as I mentioned, can run both on the client-side (using a browser engine for example), and on the server-side using NodeJS.
 
