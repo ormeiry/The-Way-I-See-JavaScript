@@ -30,4 +30,9 @@ console.log(shoppingList.wine.white); // output: 1
 console.log(shoppingList.someNoneExistingKey); // output: undefined
 ```
 
-As you can see, the **shoppingList** holds the key-value pairs inside and we use them with the "." after the shoppingList. Wine is a nested object that holds its own key-value pairs. We get them by using the **"."** one more time -> **shoppingList** -> then the **"."** to get a reference to the **wine** -> then another **"."** to get a reference to the keys inside it. If we try to get a value inside an object by using a key that does not exist, we get back **undefined**.
+As you can see, the **shoppingList** holds the key-value pairs inside and we use them with the "." after the **shoppingList**. Wine is a nested object that holds its own key-value pairs. We get them by using the **"."** one more time -> **shoppingList** -> then the **"."** to get a reference to the **wine** -> then another **"."** to get a reference to the keys inside it. If we try to get a value inside an object by using a key that does not exist, we get back **undefined**.
+
+<br>
+
+So I guess you are starting to see where Objects can be of help.
+In some applications, for example, we need to collect some User data from the client, maybe via an HTML form, and send it to our backend server for it to save the data to some database. We need a data structure to hold the User data while we are collecting it - that is where the JS Object shines.
