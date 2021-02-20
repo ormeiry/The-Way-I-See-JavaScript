@@ -39,4 +39,4 @@ In some applications, for example, we need to collect some User data from the cl
 
 <br>
 
-We can store booleans, numbers, strings, arrays, and objects inside of an Object.
+**We can store booleans, numbers, strings, arrays, and objects inside of an Object.** Objects may contain methods as well, and we will soon learn about it.
