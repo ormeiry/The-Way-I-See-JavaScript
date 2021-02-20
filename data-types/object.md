@@ -36,3 +36,7 @@ As you can see, the **shoppingList** holds the key-value pairs inside and we use
 
 So I guess you are starting to see where Objects can be of help.
 In some applications, for example, we need to collect some User data from the client, maybe via an HTML form, and send it to our backend server for it to save the data to some database. We need a data structure to hold the User data while we are collecting it - that is where the JS Object shines.
+
+<br>
+
+We can store booleans, numbers, strings, arrays, and objects inside of an Object.
