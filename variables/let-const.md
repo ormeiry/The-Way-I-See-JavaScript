@@ -95,7 +95,8 @@ const ourFirstObject = {
 ourFirstObject.firstName = 'NOT John!!';
 ```
 
-In the example above we see our first JS object, we will learn all about it in a separate file. All you need to understand now is that the object has properties(it's like a container of values), and we are allowed to change the properties themselves. even when using **const**.
+In the example above we see our first JS object, we will learn all about it in a separate file -> [Here](.././data-types/object.md).
+All you need to understand now is that the object has properties(it's like a container of values), and we are allowed to change the properties themselves. even when using **const**.
 What is happening is, we are not changing the object itself to be some new object, we change the object's properties with the **.** after the object name (we will learn more about it).
 
 ```js
