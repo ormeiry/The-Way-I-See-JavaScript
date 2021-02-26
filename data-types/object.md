@@ -40,4 +40,21 @@ In some applications, for example, we need to collect some User data from the cl
 <br>
 
 We can store booleans, numbers, strings, arrays, and objects inside of an Object.
-**There are obejct methods as well, and we will lrean all about them soon.**
+\*\*There are object methods as well. You can think of methods as functions that are properties of an object. Let's see an example:
+
+```js
+const person = {
+  name: "Bob",
+  age: 32,
+  describe: function() {
+    console.log(`This person is ${this.age} years old, and his name is ${this.name}.`)
+
+    // 'this' is an important keyword. Here it refers to the object
+    // that invokes the function.
+  }
+}
+  person.describe(); // output: "This person is 32 years old, and his name is Bob"
+}
+```
+
+We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
