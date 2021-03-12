@@ -58,3 +58,33 @@ const person = {
 ```
 
 We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
+
+<br>
+<hr>
+
+### Just like an Array, Objects have some built-in methods we can use. Let's take get to know some of them.
+
+<br>
+
+So, what if we want to loop over an object and get all the values it holds? How may we go about it?...well, we can do it in various ways. Let's see one of them now:
+
+```js
+const ourObj = {
+  someKey: 'some Value',
+  someKeyTwo: 'some Value Two',
+  someKeyThree: 'some Value Three',
+  someKeyFour: 'some Value Four',
+};
+
+// We use the Object.keys(). It returns an array of all the object keys,
+// then we loop over it and access the value of each key.
+
+Object.keys(ourObj).forEach((key) => {
+  // We can chain the forEach method because its an array of keys(strings)
+
+  console.log(ourObj[key]);
+  // We take the key and use square brackets to access the value
+});
+```
+
+Just like the **.** that we used earlier, we can use the square brackets, but it gives us a more dynamic way of using keys.
