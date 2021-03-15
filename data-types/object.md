@@ -88,3 +88,23 @@ Object.keys(ourObj).forEach((key) => {
 ```
 
 Just like the **.** that we used earlier, we can use the square brackets, but it gives us a more dynamic way of using keys.
+<br>
+
+There is a simpler way we can get the same result we did above, and it is by using **Object.values**:
+
+```js
+const ourObj = {
+  someKey: 'some Value',
+  someKeyTwo: 'some Value Two',
+  someKeyThree: 'some Value Three',
+  someKeyFour: 'some Value Four',
+};
+
+// The Object.values() returns an array of all the object values,
+// then we loop over it and can do what we need.
+
+Object.values(ourObj).forEach((value) => {
+  // We can chain the forEach method because its an array
+  console.log(value);
+});
+```
