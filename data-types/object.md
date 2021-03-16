@@ -108,3 +108,16 @@ Object.values(ourObj).forEach((value) => {
   console.log(value);
 });
 ```
+
+We can use **Object.entries()** if we want to get both the key and the value together. It returns an array of arrays, each array contains the key and value like so **[ [key, value], [key, value] ]** and so on.
+
+```js
+const newObj = {
+  keyOne: 'I am a string!',
+  keyTwo: false,
+  keyThree: 20,
+};
+
+console.log(Object.entries(newObj));
+// output: [["keyOne", "I am a string!"], ["keyTwo", false], ["keyThree", 20]]
+```
