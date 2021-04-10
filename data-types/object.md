@@ -62,7 +62,7 @@ We invoke the method just like we saw earlier by writing the object name and usi
 <br>
 <hr>
 
-### Just like an Array, Objects have some built-in methods we can use. Let's take get to know some of them.
+### Just like an [Array](.././data-types/array.md), Objects have some built-in methods we can use. Let's take get to know some of them.
 
 <br>
 
