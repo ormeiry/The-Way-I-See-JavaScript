@@ -125,7 +125,7 @@ console.log(Object.entries(newObj));
 // output: [["keyOne", "I am a string!"], ["keyTwo", false], ["keyThree", 20]]
 ```
 
-Another way of looping over the keys of an object is by using **for...in**. let's look at an example:
+Another way of looping over the keys of an object is by using **for...in**. let's take a look at an example:
 
 ```js
 const greatObj = {
@@ -139,7 +139,7 @@ for (let key in greatObj) {
   console.log(`The key is: ${key}, Its value is: ${greatObj[key]}.`);
 
   // output: The key is: numArr, Its value is: 1,2,3,4.
-  // output: The key is: amazingStr, Its value is: String.
+  // output: The key is: amazingStr, Its value is: String!.
   // and so on.
 }
 ```
