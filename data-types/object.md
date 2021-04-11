@@ -70,6 +70,7 @@ So, what if we want to loop over an object and get all the values it holds? How 
 <br>
 
 **Object.keys()**
+
 ```js
 const ourObj = {
   someKey: 'some Value',
@@ -111,7 +112,7 @@ Object.values(ourObj).forEach((value) => {
 });
 ```
 
-We can use **Object.entries()** if we want to get both the key and the value together. It returns an array of arrays, each array contains the key and value like so **[ [key, value], [key, value] ]** and so on.
+We can use **Object.entries()** if we want to get both the key and the value together. It returns an array of arrays. Each array contains the key and value like so **[ [key, value], [key, value] ]**, and so on.
 
 ```js
 const newObj = {
@@ -122,4 +123,23 @@ const newObj = {
 
 console.log(Object.entries(newObj));
 // output: [["keyOne", "I am a string!"], ["keyTwo", false], ["keyThree", 20]]
+```
+
+Another way of looping over the keys of an object is by using **for...in**. let's look at an example:
+
+```js
+const greatObj = {
+  numArr: [1, 2, 3, 4], // an array inside of an object.
+  amazingStr: 'String!',
+  evenBetterStr: 'Better String!!!',
+  singleNum: 5,
+};
+
+for (let key in greatObj) {
+  console.log(`The key is: ${key}, Its value is: ${greatObj[key]}.`);
+
+  // output: The key is: numArr, Its value is: 1,2,3,4.
+  // output: The key is: amazingStr, Its value is: String.
+  // and so on.
+}
 ```
