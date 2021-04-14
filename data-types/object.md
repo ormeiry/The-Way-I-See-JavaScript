@@ -57,6 +57,27 @@ const person = {
 }
 ```
 
+<br>
+
+We can make a copy of the obj by using the **spread operator ". . ."** like so:
+
+```js
+const person = {
+  name: "Bob",
+  age: 32,
+};
+
+const newObj = { ...person };
+
+// Now we can change some of the properties whitout changing the original person obj.
+newObj.name = "Not Bob";
+
+console.log(person.name); // output: Bob
+console.log(newObj.name); // output: Not Bob
+```
+
+<br>
+
 We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
 
 <br>
@@ -73,10 +94,10 @@ So, what if we want to loop over an object and get all the values it holds? How 
 
 ```js
 const ourObj = {
-  someKey: 'some Value',
-  someKeyTwo: 'some Value Two',
-  someKeyThree: 'some Value Three',
-  someKeyFour: 'some Value Four',
+  someKey: "some Value",
+  someKeyTwo: "some Value Two",
+  someKeyThree: "some Value Three",
+  someKeyFour: "some Value Four",
 };
 
 // We use the Object.keys(). It returns an array of all the object keys,
@@ -97,10 +118,10 @@ There is a simpler way we can get the same result we did above, and it is by usi
 
 ```js
 const ourObj = {
-  someKey: 'some Value',
-  someKeyTwo: 'some Value Two',
-  someKeyThree: 'some Value Three',
-  someKeyFour: 'some Value Four',
+  someKey: "some Value",
+  someKeyTwo: "some Value Two",
+  someKeyThree: "some Value Three",
+  someKeyFour: "some Value Four",
 };
 
 // The Object.values() returns an array of all the object values,
@@ -116,7 +137,7 @@ We can use **Object.entries()** if we want to get both the key and the value tog
 
 ```js
 const newObj = {
-  keyOne: 'I am a string!',
+  keyOne: "I am a string!",
   keyTwo: false,
   keyThree: 20,
 };
@@ -130,8 +151,8 @@ Another way of looping over the keys of an object is by using **for...in**. let'
 ```js
 const greatObj = {
   numArr: [1, 2, 3, 4], // an array inside of an object.
-  amazingStr: 'String!',
-  evenBetterStr: 'Better String!!!',
+  amazingStr: "String!",
+  evenBetterStr: "Better String!!!",
   singleNum: 5,
 };
 
