@@ -69,7 +69,20 @@ const person = {
 
 const newObj = { ...person };
 
-// Now we can change some of the properties whitout changing the original person obj.
+// Now we can change some of the properties without changing the original person obj.
+
+newObj.name = "Not Bob";
+
+console.log(person.name); // output: Bob
+console.log(newObj.name); // output: Not Bob
+```
+
+The above is the same as using **Object.assign()** method:
+
+```js
+const newObj = Object.assign({}, person);
+// We tell it to copy the person object to a new empty one.
+
 newObj.name = "Not Bob";
 
 console.log(person.name); // output: Bob
