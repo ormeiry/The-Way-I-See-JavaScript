@@ -63,15 +63,15 @@ We can make a copy of the obj by using the **spread operator ". . ."** like so:
 
 ```js
 const person = {
-  name: "Bob",
+  name: 'Bob',
   age: 32,
 };
 
 const newObj = { ...person };
 
-// Now we can change some of the properties without changing the original person obj.
+// Now, we can change some of the properties without changing the original person obj.
 
-newObj.name = "Not Bob";
+newObj.name = 'Not Bob';
 
 console.log(person.name); // output: Bob
 console.log(newObj.name); // output: Not Bob
@@ -83,10 +83,49 @@ The above is the same as using **Object.assign()** method:
 const newObj = Object.assign({}, person);
 // We tell it to copy the person object to a new empty one.
 
-newObj.name = "Not Bob";
+newObj.name = 'Not Bob';
 
 console.log(person.name); // output: Bob
 console.log(newObj.name); // output: Not Bob
+```
+
+There is a problem with making a copy the ways we did above. In case we face an object with a value of a key being a nested object or an array, it will still point to the original object/array instead of making a copy of them aswell. Let's see that in action:
+
+```js
+const ogObj = {
+  name: 'OG name',
+  nested: {
+    nestedVal: 'OG nested value',
+  },
+};
+
+// Making a copy
+const newObj = { ...ogObj };
+
+// Changing the netstedVal
+newObj.nested.nestedVal = 'Not OG';
+
+console.log(ogObj.nested.nestedVal); // output: Not OG
+```
+
+As you can see, we made a copy of ogObj, but the nested object is still the original one, so it changes. In order to fix that, we can use some built-in JSON methods.
+
+```js
+const ogObj = {
+  name: 'OG name',
+  nested: {
+    nestedVal: 'OG nested value',
+  },
+};
+
+// Making a copy by converting the JS object into JSON string and then parsing it back into a JS object
+const newObj = JSON.parse(JSON.stringify(ogObj));
+
+// Changing the netstedVal
+newObj.nested.nestedVal = 'Not OG';
+
+console.log(ogObj.nested.nestedVal); // output: OG nested value
+console.log(newObj.nested.nestedVal); // output: Not OG
 ```
 
 <br>
@@ -107,10 +146,10 @@ So, what if we want to loop over an object and get all the values it holds? How 
 
 ```js
 const ourObj = {
-  someKey: "some Value",
-  someKeyTwo: "some Value Two",
-  someKeyThree: "some Value Three",
-  someKeyFour: "some Value Four",
+  someKey: 'some Value',
+  someKeyTwo: 'some Value Two',
+  someKeyThree: 'some Value Three',
+  someKeyFour: 'some Value Four',
 };
 
 // We use the Object.keys(). It returns an array of all the object keys,
@@ -131,10 +170,10 @@ There is a simpler way we can get the same result we did above, and it is by usi
 
 ```js
 const ourObj = {
-  someKey: "some Value",
-  someKeyTwo: "some Value Two",
-  someKeyThree: "some Value Three",
-  someKeyFour: "some Value Four",
+  someKey: 'some Value',
+  someKeyTwo: 'some Value Two',
+  someKeyThree: 'some Value Three',
+  someKeyFour: 'some Value Four',
 };
 
 // The Object.values() returns an array of all the object values,
@@ -150,7 +189,7 @@ We can use **Object.entries()** if we want to get both the key and the value tog
 
 ```js
 const newObj = {
-  keyOne: "I am a string!",
+  keyOne: 'I am a string!',
   keyTwo: false,
   keyThree: 20,
 };
@@ -164,8 +203,8 @@ Another way of looping over the keys of an object is by using **for...in**. let'
 ```js
 const greatObj = {
   numArr: [1, 2, 3, 4], // an array inside of an object.
-  amazingStr: "String!",
-  evenBetterStr: "Better String!!!",
+  amazingStr: 'String!',
+  evenBetterStr: 'Better String!!!',
   singleNum: 5,
 };
 
