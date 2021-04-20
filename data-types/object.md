@@ -57,7 +57,13 @@ const person = {
 }
 ```
 
+
+We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
+
+
 <br>
+
+### Making copies
 
 We can make a copy of the obj by using the **spread operator ". . ."** like so:
 
@@ -130,9 +136,6 @@ console.log(newObj.nested.nestedVal); // output: Not OG
 
 <br>
 
-We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
-
-<br>
 <hr>
 
 ### Just like an [Array](.././data-types/array.md), Objects have some built-in methods we can use. Let's take get to know some of them.
