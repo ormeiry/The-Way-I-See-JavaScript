@@ -44,22 +44,29 @@ We can store booleans, numbers, strings, arrays, and objects inside of an Object
 
 ```js
 const person = {
-  name: "Bob",
+  name: 'Bob',
   age: 32,
-  describe: function() {
-    console.log(`This person is ${this.age} years old, and his name is ${this.name}.`)
+  describe: function () {
+    console.log(
+      `This person is ${this.age} years old, and his name is ${this.name}.`
+    );
 
     // 'this' is an important keyword. Here it refers to the object
     // that invokes the function.
-  }
-}
-  person.describe(); // output: "This person is 32 years old, and his name is Bob"
-}
+  },
+
+  // Another way of writing a method, same as describe method.
+  alsoDescribe() {
+    console.log(
+      `This person is ${this.age} years old, and his name is ${this.name}.`
+    );
+  },
+};
+person.describe(); // output: "This person is 32 years old, and his name is Bob"
+person.alsoDescribe(); // output: "This person is 32 years old, and his name is Bob"
 ```
 
-
 We invoke the method just like we saw earlier by writing the object name and using the **"."** notation. The **this** keyword is a tricky one to understand, and I will expand on it later on.
-
 
 <br>
 
