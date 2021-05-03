@@ -246,6 +246,17 @@ const newStr = ourStr.replaceAll('+_', ' ');
 console.log(newStr); // output: This is an example
 ```
 
+**string.toString()**
+We can take a Number or a Boolean, and change it into a string.
+
+```js
+let ourNum = 5;
+let ourBool = true;
+
+console.log(ourNum.toString()) // output: '5' (as a string)
+console.log(ourBool.toString())) // output: 'true'(as a string)
+```
+
 <hr />
 
 **So, we have covered a lot on the string data type, and the methods we can use on it.
