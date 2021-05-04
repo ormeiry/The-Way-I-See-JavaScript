@@ -247,9 +247,12 @@ console.log(newStr); // output: This is an example
 ```
 
 **string.toString()**
-We can take a Number or a Boolean, and change it into a string.
 
 ```js
+// We can take a Number or a Boolean, and change it into a string, by using to toString() method.
+
+// It takes the actual value, and present it as a string.
+
 let ourNum = 5;
 let ourBool = true;
 
