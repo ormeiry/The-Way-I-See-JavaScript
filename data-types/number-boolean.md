@@ -111,4 +111,19 @@ function checkAuth(user) {
 
 The example above is a simple one, in real applications, the process is somewhat different and has more levels and complexity.
 
+
+We can convert other data types in to boolean's. For example the number 1 in is true, and 0 is false.
+An empty string is false, and thanks is false.
+
+```js
+// We can use !!, or the Boolean() method.
+
+Boolean(1); // true
+
+const Val = 0;
+!!val; // false
+
+Boolean(null); // false
+!!undefined // false
+```
 [string ->](./string.md)
