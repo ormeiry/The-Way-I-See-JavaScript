@@ -43,6 +43,7 @@ whatAmI = 5 + '5'; //  it's now a string "55".
 
 Another data type is a boolean, we as programmers use booleans to control our flow of the code, determine whether or not to activate something, is a user authenticated, is something being loaded and we need to display a loading spinner, and much more...
 [See JS Function](.././others/function.md)
+
 ```js
 let isDataReady = false;
 
@@ -111,7 +112,6 @@ function checkAuth(user) {
 
 The example above is a simple one, in real applications, the process is somewhat different and has more levels and complexity.
 
-
 We can convert other data types in to boolean's. For example the number 1 in is true, and 0 is false.
 An empty string is false, and thanks is false.
 
@@ -124,6 +124,11 @@ const Val = 0;
 !!val; // false
 
 Boolean(null); // false
-!!undefined // false
+!!undefined; // false
+Boolean(''); // false
+Boolean('Not empty'); // true
+!![]; // true
+Boolean({}); // true
 ```
+
 [string ->](./string.md)
