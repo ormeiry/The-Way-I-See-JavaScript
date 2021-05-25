@@ -1,6 +1,6 @@
 # The Way I See JavaScript
 
-### My way of understanding and explaining the JavaScript programming language.
+### My way of understanding and explaining the JavaScript programming language. We start with the basic things, and move to more advanced JS as we go.
 
 <hr>
 </br>
